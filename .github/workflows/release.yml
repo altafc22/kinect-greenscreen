@@ -1,0 +1,39 @@
+name: Build
+
+on:
+  release:
+    types: 
+      - created
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup nuget
+        uses: warrenbuckley/Setup-Nuget@v1
+      - name: Setup msbuild
+        uses: microsoft/setup-msbuild@v1.0.0
+      - run: nuget restore
+      - run: msbuild -t:restore KinectGreenScreen.sln
+      - name: Build
+        run: msbuild KinectGreenScreen.csproj -p:Configuration=Release
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.0
+      - name: Get version
+        uses: olegtarasov/get-tag@v2
+        id: get_version
+      - name: Zip release
+        run: Compress-Archive ./bin/AnyCPU/Release/* KinectGreenScreen.zip
+      - name: Upload
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          asset_path: ./KinectGreenScreen.zip
+          asset_name: KinectGreenScreen-${{ steps.get_version.outputs.tag }}.zip
+          asset_content_type: application/zip
