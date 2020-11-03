@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectV2GreenScreen", "KinectV2GreenScreen.csproj", "{4BB6C393-9003-4608-BD70-F3FDA26378AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectGreenScreen", "KinectGreenScreen.csproj", "{4BB6C393-9003-4608-BD70-F3FDA26378AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

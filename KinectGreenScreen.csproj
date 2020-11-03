@@ -7,8 +7,8 @@
     <ProjectGuid>{4BB6C393-9003-4608-BD70-F3FDA26378AA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.Samples.Kinect.CoordinateMappingBasics</RootNamespace>
-    <AssemblyName>ATXsKinectV2GreenScreen</AssemblyName>
+    <RootNamespace>MaxHenkel.Kinect.GreenScreen</RootNamespace>
+    <AssemblyName>KinectGreenScreen</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -152,15 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Kinect.ico" />
-    <Resource Include="Images\Logo.png" />
-    <Resource Include="Images\ScreenshotHover.png" />
-    <Resource Include="Images\ScreenshotNormal.png" />
-    <Resource Include="Images\Status.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Background.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
